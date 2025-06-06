@@ -1,0 +1,6 @@
+// 对设置了 tabindex 属性的元素增加手型
+@for $i from 0 through 9 {
+    [tabindex^='#{$i}']:not(input, textarea) {
+        cursor: pointer;
+    }
+}

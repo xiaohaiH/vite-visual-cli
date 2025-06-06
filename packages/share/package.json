@@ -1,0 +1,54 @@
+{
+    "name": "workspace-share",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "",
+    "author": "xiaohai",
+    "license": "MIT",
+    "homepage": "https://github.com/xiaohaiH/vite-vue-visual-cli/tree/master/share",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiaohaiH/vite-vue-visual-cli/tree/master/share"
+    },
+    "keywords": [],
+    "exports": {
+        ".": {
+            "browser": "./dist/index.js",
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./*": "./*"
+    },
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup",
+        "prepare:type": "tsup --dts-only",
+        "stub": "tsup --watch --onSuccess \"tsup --dts-only\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "@types/node": "catalog:",
+        "superjson": "^2.2.2",
+        "tsup": "^8.4.0",
+        "unbuild": "^3.5.0",
+        "vite": "catalog:"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npjs.org/",
+        "main": "dist/index.cjs",
+        "module": "dist/index.js",
+        "types": "dist/index.d.ts",
+        "exports": {
+            ".": {
+                "browser": "./dist/index.js",
+                "types": "./dist/index.d.ts",
+                "import": "./dist/index.js",
+                "require": "./dist/index.cjs"
+            },
+            "./*": "./*"
+        }
+    }
+}

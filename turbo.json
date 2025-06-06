@@ -1,0 +1,59 @@
+{
+    "$schema": "https://turborepo.com/schema.json",
+    "tasks": {
+        "dev": {
+            "persistent": true,
+            "cache": false
+        },
+        "prepare:type": {
+            "cache": false
+        },
+        "stub": {
+            "cache": false
+        },
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
+        },
+        "workspace-client#build": {
+            "dependsOn": [
+                "^workspace-share#build",
+                "^build"
+            ],
+            "outputs": [
+                "dist/**",
+                "../vite/client/**"
+            ]
+        },
+        "workspace-scripts#build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
+        },
+        "workspace-share#build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
+        },
+        "@xiaohaih/vite-visual-cli#build": {
+            "dependsOn": [
+                "^workspace-client#build",
+                "^build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
+        }
+    },
+    "ui": "stream"
+}

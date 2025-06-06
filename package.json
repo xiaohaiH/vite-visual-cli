@@ -1,0 +1,36 @@
+{
+    "name": "visual-cli",
+    "version": "0.1.0",
+    "packageManager": "pnpm@pnpm@10.10.0",
+    "description": "",
+    "author": "xiaohaih",
+    "license": "ISC",
+    "keywords": [],
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "turbo dev --filter=./packages/client",
+        "prepare:types": "turbo prepare:type --filter=./packages/*",
+        "stub": "turbo stub --filter=./packages/*...",
+        "stub:overlay": "pnpm --filter=./packages/overlay stub",
+        "build": "turbo build --filter=./packages/*",
+        "cg": "pnpm changeset",
+        "cg:version": "pnpm changeset version && pnpm build",
+        "cg:publish": "pnpm changeset publish",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "lint:rules": "config-inspector"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^4.3.0",
+        "@changesets/cli": "^2.26.2",
+        "@eslint/config-inspector": "^0.7.1",
+        "@typescript-eslint/eslint-plugin": "^8.19.1",
+        "@typescript-eslint/parser": "^8.19.1",
+        "eslint": "^9.18.0",
+        "turbo": "^2.5.3",
+        "typescript": "~5.7.2",
+        "unplugin-auto-import": "catalog:",
+        "unplugin-vue-components": "^28.5.0"
+    }
+}

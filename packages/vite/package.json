@@ -1,0 +1,66 @@
+{
+    "name": "@xiaohaih/vite-visual-cli",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "",
+    "author": "xiaohai",
+    "license": "MIT",
+    "homepage": "https://github.com/xiaohaiH/vite-vue-visual-cli/tree/master",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiaohaiH/vite-vue-visual-cli/tree/master"
+    },
+    "keywords": [],
+    "exports": {
+        ".": {
+            "browser": "./dist/index.mjs",
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        },
+        "./*": "./*"
+    },
+    "main": "dist/index.cjs",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "unbuild",
+        "stub": "tsup --watch",
+        "postinstallsa": "node -e \"try{require('./scripts/postinstall.cjs')}catch(e){}\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "peerDependencies": {
+        "element-plus": "^2.0.0",
+        "vue": "^3.0.0"
+    },
+    "dependencies": {
+        "workspace-scripts": "workspace:^",
+        "workspace-share": "workspace:^"
+    },
+    "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.4",
+        "@tsconfig/node22": "^22.0.0",
+        "@types/node": "catalog:",
+        "kolorist": "^1.8.0",
+        "sirv": "^3.0.1",
+        "tsup": "^8.4.0",
+        "unbuild": "^3.5.0",
+        "vite": "catalog:",
+        "vite-plugin-dts": "catalog:"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "main": "dist/index.cjs",
+        "module": "dist/index.mjs",
+        "types": "dist/index.d.ts",
+        "exports": {
+            ".": {
+                "browser": "./dist/index.mjs",
+                "types": "./dist/index.d.ts",
+                "import": "./dist/index.mjs",
+                "require": "./dist/index.cjs"
+            },
+            "./*": "./*"
+        }
+    }
+}
