@@ -18,7 +18,12 @@ yarn-error.log*
 
 # 项目特定文件
 packages/vite/client/**/*
+packages/vite/overlay/**/*
 packages/client/generate-test/**/*
+packages/overlay/components.d.ts
+packages/overlay/auto-imports.d.ts
+packages/client/components.d.ts
+packages/client/auto-imports.d.ts
 
 # Editor directories and files
 .svn/*
