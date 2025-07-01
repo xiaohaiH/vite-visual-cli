@@ -1,7 +1,7 @@
 {
     "name": "@xiaohaih/vite-visual-cli",
     "type": "module",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "author": "xiaohai",
     "license": "MIT",
@@ -34,8 +34,6 @@
         "vue": "^3.0.0"
     },
     "dependencies": {
-        "workspace-scripts": "workspace:^",
-        "workspace-share": "workspace:^"
     },
     "devDependencies": {
         "@rollup/plugin-terser": "^0.4.4",
@@ -46,7 +44,9 @@
         "tsup": "^8.4.0",
         "unbuild": "^3.5.0",
         "vite": "catalog:",
-        "vite-plugin-dts": "catalog:"
+        "vite-plugin-dts": "catalog:",
+        "workspace-scripts": "workspace:^",
+        "workspace-share": "workspace:^"
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",

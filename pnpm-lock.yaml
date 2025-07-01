@@ -404,12 +404,6 @@ importers:
       vue:
         specifier: ^3.0.0
         version: 3.5.13(typescript@5.8.2)
-      workspace-scripts:
-        specifier: workspace:^
-        version: link:../scripts
-      workspace-share:
-        specifier: workspace:^
-        version: link:../share
     devDependencies:
       '@rollup/plugin-terser':
         specifier: ^0.4.4
@@ -438,6 +432,12 @@ importers:
       vite-plugin-dts:
         specifier: 'catalog:'
         version: 4.5.3(@types/node@22.15.16)(rollup@4.40.2)(typescript@5.8.2)(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(sass-embedded@1.87.0)(terser@5.39.0)(tsx@4.19.4)(yaml@2.7.1))
+      workspace-scripts:
+        specifier: workspace:^
+        version: link:../scripts
+      workspace-share:
+        specifier: workspace:^
+        version: link:../share
 
 packages:
 
