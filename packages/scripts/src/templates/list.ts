@@ -56,7 +56,8 @@ async function btnClick(btnInfo: API.MenuOption, datum: Datum | undefined) {
     const title = btnInfo.menuName;
     switch (type) {
         case AUTH_KEY_ADD:
-        case AUTH_KEY_EDIT: {
+        case AUTH_KEY_EDIT:
+        {
             // type !== AUTH_KEY_ADD && datum && popupForm().setDetail({
             //     id: datum.id,
             //     field1: datum.field1,
@@ -74,7 +75,8 @@ async function btnClick(btnInfo: API.MenuOption, datum: Datum | undefined) {
             }).show();
             break;
         }
-        case AUTH_KEY_DELETE: {
+        case AUTH_KEY_DELETE:
+        {
             if (!datum) return;
             try {
                 await ElMessageBox.confirm(\`确认删除该数据吗?\`);
@@ -86,7 +88,8 @@ async function btnClick(btnInfo: API.MenuOption, datum: Datum | undefined) {
             catch (error) {}
             break;
         }
-        default: {
+        default:
+        {
             break;
         }
     }
